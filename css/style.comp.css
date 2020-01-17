@@ -831,9 +831,8 @@ body {
       border-radius: 50%;
       cursor: pointer; }
     .footer__icons--link:hover > p {
-      background-image: linear-gradient(120deg, #f06000 0%, #f06000 50%, #b46421 50%, #b46421 100%);
       cursor: pointer;
-      padding: 0.5rem; }
+      color: #f06000; }
     .footer__icons .icons--linkedin,
     .footer__icons .icons--github,
     .footer__icons .icons--dribbble {
