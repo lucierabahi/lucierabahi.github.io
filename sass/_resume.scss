@@ -1,0 +1,292 @@
+.resume {
+    background-color: $color-white-contrast;
+
+    display: grid;
+    grid-template-columns: 10rem [resume-start] 1fr [resume-end] 10rem;
+    grid-template-rows: 10rem [row-start] 1fr [row-end] 10rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: 5rem [resume-start] 1fr [resume-end] 5rem;
+        grid-template-rows: 5rem [row-start] 1fr [row-end] 5rem;
+    }
+
+    &__container {
+        grid-column: resume-start / resume-end;
+        grid-row: row-start / row-end;
+
+        display: grid;
+        grid-template-rows: repeat(5, minmax(1rem, max-content));
+        grid-row-gap: 4rem;
+
+        &--education {
+            grid-row: 1 / 2;
+        }
+
+        &--separation-1 {
+            grid-row: 2 / 3;
+
+            border: solid #fff;
+            border-color: $color-orange;
+            border-width: 1px 0 0;
+            clear: both;
+            height: 0;
+        }
+
+        &--work {
+            grid-row: 3 / 4;
+        }
+
+        &--separation-2 {
+            grid-row: 4 / 5;
+
+            border: solid #fff;
+            border-color: $color-orange;
+            border-width: 1px 0 0;
+            clear: both;
+            height: 0;
+        }
+
+        &--skills {
+            grid-row: 5 / 6;
+        }
+    }
+}
+
+.education {
+    @include resume-grid;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-row-gap: 4rem;
+    }
+
+    &__heading {
+        grid-column: 1 / 4;
+
+        @include resume-title;
+        text-transform: uppercase;
+
+        &--underline {
+            border-bottom: 3px solid $color-orange;
+        }
+
+        @media only screen and (max-width: $bp-large) {
+            grid-column: 1 / 12;
+            grid-row: 1 / 2;
+        }
+    }
+
+    &__content {
+        &--1 {
+            grid-column: 4 / 12;
+            grid-row: 1 / 2;
+
+            @media only screen and (max-width: $bp-large) {
+                grid-column: 1 / 12;
+                grid-row: 2 / 3;
+            }
+        }
+
+        &--2 {
+            grid-column: 4 / 12;
+            grid-row: 2 / 3;
+
+            @media only screen and (max-width: $bp-large) {
+                grid-column: 1 / 12;
+                grid-row: 3 / 4;
+            }
+        }
+
+        &--3 {
+            grid-column: 4 / 12;
+            grid-row: 3 / 4;
+
+            @media only screen and (max-width: $bp-large) {
+                grid-column: 1 / 12;
+                grid-row: 4 / 5;
+            }
+        }
+    }
+
+    &__content-title {
+        @include resume-title;
+    }
+
+    &__content-subtitle {
+        @include resume-sub;
+    }
+
+    &__content-text {
+        @include resume-text;
+    }
+
+    a:link {
+        text-decoration: none;
+        color: $color-blue-dark;
+    }
+
+    a:hover {
+        color: $color-orange-bright;
+    }
+}
+
+.work {
+    @include resume-grid;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-row-gap: 4rem;
+    }
+
+    &__heading {
+        grid-column: 1 / 4;
+
+        @include resume-title;
+        text-transform: uppercase;
+
+        &--underline {
+            border-bottom: 3px solid $color-orange;
+        }
+
+        @media only screen and (max-width: $bp-large) {
+            grid-column: 1 / 12;
+            grid-row: 1 / 2;
+        }
+    }
+
+    &__content {
+        &--1 {
+            grid-column: 4 / 12;
+            grid-row: 1 / 2;
+
+            @media only screen and (max-width: $bp-large) {
+                grid-column: 1 / 12;
+                grid-row: 2 / 3;
+            }
+        }
+
+        &--2 {
+            grid-column: 4 / 12;
+            grid-row: 2 / 3;
+
+            @media only screen and (max-width: $bp-large) {
+                grid-column: 1 / 12;
+                grid-row: 3 / 4;
+            }
+        }
+
+        &--3 {
+            grid-column: 4 / 12;
+            grid-row: 3 / 4;
+
+            @media only screen and (max-width: $bp-large) {
+                grid-column: 1 / 12;
+                grid-row: 4 / 5;
+            }
+        }
+    }
+
+    &__content-title {
+        @include resume-title;
+    }
+
+    &__content-subtitle {
+        @include resume-sub;
+    }
+
+    &__content-text {
+        @include resume-text;
+    }
+}
+
+.skills {
+    @include resume-grid;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-row-gap: 4rem;
+    }
+
+    &__heading {
+        grid-column: 1 / 4;
+
+        @include resume-title;
+        text-transform: uppercase;
+
+        &--underline {
+            border-bottom: 3px solid $color-orange;
+        }
+
+        @media only screen and (max-width: $bp-large) {
+            grid-column: 1 / 12;
+            grid-row: 1 / 2;
+        }
+    }
+
+    &__content {
+        &--1 {
+            grid-column: 4 / 6;
+            grid-row: 1 / 2;
+
+            @include resume-skills;
+
+            @media only screen and (max-width: $bp-large) {
+                grid-column: 1 / 12;
+                grid-row: 2 / 3;
+            }
+        }
+
+        &--2 {
+            grid-column: 7 / 9;
+            grid-row: 1 / 2;
+
+            @include resume-skills;
+
+            @media only screen and (max-width: $bp-large) {
+                grid-column: 1 / 12;
+                grid-row: 3 / 4;
+            }
+        }
+
+        &--3 {
+            grid-column: 10 / 12;
+            grid-row: 1 / 2;
+
+            @include resume-skills;
+
+            @media only screen and (max-width: $bp-large) {
+                grid-column: 1 / 12;
+                grid-row: 4 / 5;
+            }
+        }
+
+        &--4 {
+            grid-column: 4 / 12;
+            grid-row: 2 / 3;
+
+            @media only screen and (max-width: $bp-large) {
+                grid-column: 1 / 12;
+                grid-row: 5 / 6;
+            }
+        }
+
+        &--5 {
+            grid-column: 4 / 12;
+            grid-row: 3 / 4;
+
+            @media only screen and (max-width: $bp-large) {
+                grid-column: 1 / 12;
+                grid-row: 6 / 7;
+            }
+        }
+    }
+
+    &__content-img {
+        margin-bottom: 1rem;
+    }
+
+    &__content-title {
+        @include resume-title;
+    }
+
+    &__content-text {
+        @include resume-text;
+    }
+}

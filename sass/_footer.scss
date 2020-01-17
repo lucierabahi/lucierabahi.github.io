@@ -1,0 +1,113 @@
+.footer {
+    background-color: $color-grey-dark;
+
+    display: grid;
+    grid-template-rows: 5rem [row-start] 1fr [row-end] 5rem;
+    grid-template-columns: 3rem [footer-start] 1fr [footer-end] 3rem;
+
+    &__content {
+        grid-row: row-start / row-end;
+        grid-column: footer-start / footer-end;
+
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr max-content;
+        grid-template-rows: 1fr min-content;
+        grid-column-gap: 10rem;
+        grid-row-gap: 3rem;
+
+        color: $color-white-contrast;
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-row-gap: 3rem;
+            grid-column-gap: 1rem;
+        }
+    }
+
+    &__icons {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        transition: all 1s;
+
+        &--link {
+            display: flex;
+            align-items: center;
+
+            text-decoration: none;
+            color: $color-white-contrast;
+        }
+
+        &--link:hover > img {
+            background-image: linear-gradient(
+                120deg,
+                $color-orange-bright 0%,
+                $color-orange-bright 50%,
+                $color-orange 50%,
+                $color-orange 100%
+            );
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        &--link:hover > p {
+            background-image: linear-gradient(
+                120deg,
+                $color-orange-bright 0%,
+                $color-orange-bright 50%,
+                $color-orange 50%,
+                $color-orange 100%
+            );
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .icons--linkedin,
+        .icons--github,
+        .icons--dribbble {
+            height: 3rem;
+            width: 3rem;
+            margin: 0.4vw;
+            margin-right: 1.5vw;
+        }
+    }
+
+    &__contact {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        @media only screen and (max-width: $bp-small) {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+
+        &--heading {
+            font-family: $font-title;
+            font-size: 2.3rem;
+            font-weight: 300;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+
+        &--text {
+            font-size: 1.3rem;
+        }
+    }
+
+    &__copyright {
+        grid-column: 4 / 5;
+        grid-row: 2 / 3;
+
+        @media only screen and (max-width: $bp-small) {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+        }
+    }
+}

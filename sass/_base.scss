@@ -1,0 +1,120 @@
+// COLOR VARIABLES
+$color-grey-light: #7f8ba8;
+$color-grey-dark: #0e1c1a;
+$color-blue-light: #246592;
+$color-blue-dark: #183344;
+$color-violet: #8a6a6d;
+$color-orange: #b46421;
+$color-orange-bright: #f06000;
+$color-white: #fff;
+$color-white-contrast: rgba(255, 255, 255, 0.8);
+
+// FONT VARIABLES
+$font-text: 'Open Sans', sans-serif;
+$font-title: 'Libre Baskerville', serif;
+
+@mixin resume-grid {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(auto-fit, minmax(min-content, auto));
+    grid-row-gap: 3rem;
+}
+
+@mixin resume-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+@mixin resume-sub {
+    font-family: $font-title;
+    font-style: italic;
+    color: $color-grey-light;
+    font-size: 2rem;
+    margin-bottom: 0.7rem;
+}
+
+@mixin resume-text {
+    font-size: 1.4rem;
+    line-height: 1.8;
+}
+
+@mixin resume-skills {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+@mixin section-title {
+    color: $color-white-contrast;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+// RESPONSIVE BREAKPOINTS
+// $bp-largest: 81.25em; // 1300px / 16px
+// $bp-large: 68.75em; // 1100px
+// $bp-medium-large: 60.625em; // 970px
+// $bp-medium: 50em; // 800px
+// $bp-small: 37.5em; // 600px
+
+$bp-largest: 75em; // 1200px / 16px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px
+$bp-small: 37.5em; // 600px
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px / 16px = 62.5% -> 1rem = 10px
+
+    scroll-behavior: smooth;
+
+    // @media only screen and (max-width: $bp-largest) {
+    //     font-size: 50%;
+    // }
+}
+
+body {
+    font-family: $font-text;
+    color: $color-blue-dark;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+// .container {
+//     // display: grid;
+//     // grid-template-rows: 100vh minmax(min-content, max-content) 40vw repeat(
+//     //         3,
+//     //         min-content
+//     //     );
+//     // grid-template-columns:
+//     //     [full-start] minmax(6rem, 1fr)
+//     //     [center-start] repeat(
+//     //         10,
+//     //         [col-start] minmax(min-content, 14rem) [col-end]
+//     //     )
+//     //     [center-end] minmax(6rem, 1fr) [full-end];
+
+//     // @media only screen and (max-width: $bp-large) {
+//     //     grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+//     //     grid-template-columns:
+//     //         [full-start] minmax(6rem, 1fr)
+//     //         [center-start] repeat(
+//     //             8,
+//     //             [col-start] minmax(min-content, 14rem) [col-end]
+//     //         )
+//     //         [center-end] minmax(6rem, 1fr) [full-end];
+//     // }
+
+//     // @media only screen and (max-width: $bp-medium) {
+//     //     grid-template-rows: 6rem calc(100vh - 6rem);
+//     // }
+// }

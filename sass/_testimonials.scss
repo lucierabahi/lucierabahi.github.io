@@ -1,0 +1,33 @@
+.testimonials {
+    background-image: url(../img/testimonials-bg.jpg);
+    background-size: cover;
+    padding: 5rem 0;
+}
+
+.carousel-cell {
+    width: 60%;
+    margin: 5rem 1000rem;
+    padding: 5rem;
+    background: $color-white-contrast;
+    counter-increment: gallery-cell;
+    line-height: 1.8;
+
+    @media only screen and (max-width: $bp-medium) {
+        width: 80%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    &__quote {
+        font-size: 1.5rem;
+    }
+
+    &__author {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-top: 1rem;
+    }
+}
