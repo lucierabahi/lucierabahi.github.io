@@ -55,16 +55,8 @@
         }
 
         &--link:hover > p {
-            // background-image: linear-gradient(
-            //     120deg,
-            //     $color-orange-bright 0%,
-            //     $color-orange-bright 50%,
-            //     $color-orange 50%,
-            //     $color-orange 100%
-            // );
             cursor: pointer;
             color: $color-orange-bright;
-            //padding: 0.5rem;
         }
 
         .icons--linkedin,
