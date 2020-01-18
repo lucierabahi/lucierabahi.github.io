@@ -66,7 +66,7 @@
         content: attr(data-open);
         display: block;
         width: 10rem;
-        margin-top: 3rem;
+        /* margin-top: 3rem; */
         padding: 1rem 2rem;
         background: #f06000;
         text-align: center;

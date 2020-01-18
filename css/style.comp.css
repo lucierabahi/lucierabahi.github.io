@@ -241,6 +241,9 @@ body {
   .header-content__down-link {
     grid-row: 6 / 7;
     grid-column: 2 / 3; }
+    @media only screen and (max-width: 37.5em) {
+      .header-content__down-link {
+        display: none; } }
   .header-content__down {
     height: 5rem;
     width: 100%;
@@ -249,6 +252,9 @@ body {
       cursor: pointer;
       animation: go-down 0.3s infinite;
       animation-direction: alternate; }
+    @media only screen and (max-width: 37.5em) {
+      .header-content__down {
+        display: none; } }
 
 @keyframes go-down {
   0% {

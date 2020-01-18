@@ -33,7 +33,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             const id = entry.target.getAttribute('id');
-            console.log(id);
             if (entry.intersectionRatio > 0.25) {
                 document
                     .querySelector(`nav li a[href="#${id}"]`)
