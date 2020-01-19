@@ -51,6 +51,12 @@ https://flickity.metafizzy.co
     color: #246592;
 }
 
+@media only screen and (max-width: 800px) {
+    .flickity-button {
+        display: none;
+    }
+}
+
 .flickity-button:hover {
     background: #fff;
     cursor: pointer;
