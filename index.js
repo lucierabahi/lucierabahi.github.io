@@ -25,15 +25,15 @@ function stickyClass() {
 /**ACTIVE CLASS**/
 window.addEventListener('DOMContentLoaded', () => {
     const options = {
-        // 0.25 = The callback is fired when 25% of the element is visible
+        // 0.2 = The callback is fired when 20% of the element is visible
         // We can add more values to the array, like 0.25, 0.75 or 1.0
-        threshold: [0.25],
+        threshold: [0.2],
     };
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             const id = entry.target.getAttribute('id');
-            if (entry.intersectionRatio > 0.25) {
+            if (entry.intersectionRatio > 0.2) {
                 document
                     .querySelector(`nav li a[href="#${id}"]`)
                     .parentElement.classList.add('active');
