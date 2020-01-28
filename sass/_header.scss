@@ -56,7 +56,10 @@
 
     display: grid;
     grid-template-columns: 3rem [header-start] 1fr [header-end] 3rem;
-    grid-template-rows: min-content 1fr minmax(min-content, max-content);
+    grid-template-rows: min-content minmax(1fr, 30rem) minmax(
+            min-content,
+            max-content
+        );
     height: 100vh;
 
     @media only screen and (max-width: $bp-medium) {
