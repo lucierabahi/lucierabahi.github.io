@@ -160,6 +160,9 @@ body {
     .header {
       grid-template-columns: 1rem [header-start] 1fr [header-end] 1rem;
       grid-template-rows: min-content 20rem minmax(min-content, max-content); } }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      grid-template-rows: min-content 10rem minmax(min-content, max-content); } }
 
 .navigation {
   grid-column: header-start / header-end;
