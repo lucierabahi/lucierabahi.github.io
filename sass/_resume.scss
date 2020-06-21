@@ -16,7 +16,7 @@
 
         display: grid;
         grid-template-rows: repeat(5, minmax(1rem, max-content));
-        grid-row-gap: 4rem;
+        //grid-row-gap: 4rem;
 
         &--education {
             grid-row: 1 / 2;

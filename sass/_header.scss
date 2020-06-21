@@ -68,7 +68,7 @@
     }
 
     @media only screen and (max-width: $bp-small) {
-        grid-template-rows: min-content 10rem minmax(min-content, max-content);
+        grid-template-rows: min-content 15rem minmax(min-content, max-content);
     }
 }
 
@@ -135,11 +135,19 @@
     &__heading-1 {
         grid-row: 2 / 3;
         grid-column: 2 / 3;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 4rem;
+        }
     }
 
     &__heading-2 {
         grid-row: 3 / 4;
         grid-column: 2 / 3;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 2rem;
+        }
     }
 
     &__separation {
